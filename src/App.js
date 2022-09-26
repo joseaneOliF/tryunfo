@@ -9,5 +9,5 @@ class App extends React.Component {
     );
   }
 }
-
+// Iniciando o projeto
 export default App;
