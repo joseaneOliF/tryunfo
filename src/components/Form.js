@@ -13,6 +13,7 @@ class Form extends React.Component {
         <label htmlFor="name">
           Nome:
           <input
+            name="name"
             data-testid="name-input"
             type="text"
             value={ cardName }
@@ -22,6 +23,7 @@ class Form extends React.Component {
         <label htmlFor="description">
           Descrição:
           <textarea
+            name="description"
             data-testid="description-input"
             type="text"
             value={ cardDescription }
@@ -31,6 +33,7 @@ class Form extends React.Component {
         <label htmlFor="atributo1">
           Atributo 1:
           <input
+            name="attr1"
             data-testid="attr1-input"
             type="number"
             value={ cardAttr1 }
@@ -40,6 +43,7 @@ class Form extends React.Component {
         <label htmlFor="atributo2">
           Atributo 2:
           <input
+            name="attr2"
             data-testid="attr2-input"
             type="number"
             value={ cardAttr2 }
@@ -49,6 +53,7 @@ class Form extends React.Component {
         <label htmlFor="atributo3">
           Atributo 3:
           <input
+            name="attr3"
             data-testid="attr3-input"
             type="number"
             value={ cardAttr3 }
@@ -58,13 +63,16 @@ class Form extends React.Component {
         <label htmlFor="image" type="text">
           Imagem:
           <input
+            name="image"
             data-testid="image-input"
             value={ cardImage }
             onChange={ onInputChange }
           />
         </label>
         <label htmlFor="isRare">
+          Raridade
           <select
+            name="rare"
             data-testid="rare-input"
             value={ cardRare }
             onChange={ onInputChange }
@@ -77,6 +85,7 @@ class Form extends React.Component {
         <label htmlFor="superTryunfo">
           Super Trybe Trunfo
           <input
+            name="trunfo"
             data-testid="trunfo-input"
             type="checkbox"
             checked={ cardTrunfo }
@@ -84,6 +93,7 @@ class Form extends React.Component {
           />
         </label>
         <button
+          name="description"
           data-testid="save-button"
           type="submit"
           disabled={ isSaveButtonDisabled }
