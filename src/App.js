@@ -15,16 +15,15 @@ class App extends React.Component {
       rare: '',
       trunfo: false,
     };
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange({ target }) {
-    const { name } = target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
+  handleChange = (e) => {
+    const { name } = e.target;
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
     this.setState({
       [name]: value,
     });
-  }
+  };
 
   render() {
     const { name, description, image, attr1, attr2, attr3, rare, trunfo } = this.state;
