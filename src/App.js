@@ -14,7 +14,6 @@ class App extends React.Component {
       attr3: '',
       rare: '',
       trunfo: false,
-      isSaveButtonDisabled: 'false',
     };
   }
 
