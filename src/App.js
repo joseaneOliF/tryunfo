@@ -15,8 +15,6 @@ class App extends React.Component {
       rare: '',
       trunfo: false,
       saveButtonClick: [],
-      // arrayTrunfo: [],
-      // cardTrunfo: false,
       hasTrunfo: false,
     };
   }
@@ -68,11 +66,6 @@ class App extends React.Component {
       });
     }
   };
-
-  // findTrunfo = () => {
-  //   const { arrayTrunfo } = this.state;
-  //   return arrayTrunfo.some((param) => param.cardTrunfo);
-  // };
 
   render() {
     const { name, description, image, attr1, attr2, attr3, rare, trunfo,
