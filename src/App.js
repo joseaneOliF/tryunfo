@@ -100,9 +100,8 @@ class App extends React.Component {
           cardTrunfo={ trunfo }
           onInputChange={ this.handleChange }
         />
-
         { saveButtonClick.map((el, i) => (
-          <div key={ i }>
+          <li key={ i }>
             <Card
               cardName={ el.name }
               cardDescription={ el.description }
@@ -112,10 +111,10 @@ class App extends React.Component {
               cardImage={ el.image }
               cardRare={ el.rare }
               cardTrunfo={ el.trunfo }
-
             />
-          </div>
+          </li>
         ))}
+        <ul />
 
       </div>
     );
