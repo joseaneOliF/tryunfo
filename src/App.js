@@ -16,6 +16,7 @@ class App extends React.Component {
       trunfo: false,
       saveButtonClick: [],
       hasTrunfo: false,
+      // playingCards: [],
     };
   }
 
@@ -69,7 +70,8 @@ class App extends React.Component {
 
   render() {
     const { name, description, image, attr1, attr2, attr3, rare, trunfo,
-      hasTrunfo } = this.state;
+      hasTrunfo, saveButtonClick } = this.state;
+    // console.log(playingCards);
     return (
       <div>
         <h1>Tryunfo</h1>
@@ -98,6 +100,17 @@ class App extends React.Component {
           cardTrunfo={ trunfo }
           onInputChange={ this.handleChange }
         />
+        { saveButtonClick.map((el, i) => (<Card
+          cardName={ el.name }
+          cardDescription={ el.description }
+          cardAttr1={ el.attr1 }
+          cardAttr2={ el.attr2 }
+          cardAttr3={ el.attr3 }
+          cardImage={ el.image }
+          cardRare={ el.rare }
+          cardTrunfo={ el.trunfo }
+          key={ i }
+        />))}
       </div>
     );
   }
