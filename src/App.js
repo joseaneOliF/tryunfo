@@ -120,4 +120,5 @@ class App extends React.Component {
     );
   }
 }
+// commit vazio
 export default App;
