@@ -100,17 +100,23 @@ class App extends React.Component {
           cardTrunfo={ trunfo }
           onInputChange={ this.handleChange }
         />
-        { saveButtonClick.map((el, i) => (<Card
-          cardName={ el.name }
-          cardDescription={ el.description }
-          cardAttr1={ el.attr1 }
-          cardAttr2={ el.attr2 }
-          cardAttr3={ el.attr3 }
-          cardImage={ el.image }
-          cardRare={ el.rare }
-          cardTrunfo={ el.trunfo }
-          key={ i }
-        />))}
+
+        { saveButtonClick.map((el, i) => (
+          <div key={ i }>
+            <Card
+              cardName={ el.name }
+              cardDescription={ el.description }
+              cardAttr1={ el.attr1 }
+              cardAttr2={ el.attr2 }
+              cardAttr3={ el.attr3 }
+              cardImage={ el.image }
+              cardRare={ el.rare }
+              cardTrunfo={ el.trunfo }
+
+            />
+          </div>
+        ))}
+
       </div>
     );
   }
